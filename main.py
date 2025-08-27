@@ -21,7 +21,7 @@ class KnowledgeGraphGenerator:
     def load_spacy_model(_self):
         """Streamlit의 캐시를 사용해 spaCy 모델을 효율적으로 로드합니다."""
         with st.spinner("언어 모델(spaCy)을 로딩 중입니다..."):
-            try
+            try:
                 model = spacy.load("en_core_web_sm")
                 return model
             except OSError:
